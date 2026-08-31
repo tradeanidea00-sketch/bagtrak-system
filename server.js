@@ -7,8 +7,6 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-console.log('PORT from env:', process.env.PORT);
-console.log('Using PORT:', PORT);
 
 // Database connection
 const pool = new Pool({
@@ -52,6 +50,6 @@ app.get('/api/health', (req, res) => {
 });
 
 // Start server
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`🚀 Server running on http://0.0.0.0:${PORT}`);
+app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
