@@ -7,6 +7,8 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+console.log('PORT from env:', process.env.PORT);
+console.log('Using PORT:', PORT);
 
 // Database connection
 const pool = new Pool({
